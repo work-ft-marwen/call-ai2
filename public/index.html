@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Sales Agent Platform</title>
+    <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Login Screen -->
+    <div id="login-screen" class="min-h-screen flex items-center justify-center bg-gray-900 px-4">
+        <div class="max-w-md w-full bg-gray-800 rounded-2xl shadow-lg p-8 space-y-6">
+            <h2 class="text-center text-2xl font-bold tracking-tight text-gray-100">AI Sales Agent Platform</h2>
+            <form id="login-form">
+                <button type="submit" class="group relative flex w-full justify-center rounded-lg border border-transparent bg-indigo-600 py-3 px-4 text-sm font-semibold text-white hover:bg-indigo-700 focus:outline-none">
+                    Se Connecter
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main App Screen -->
+    <div id="app-screen" class="hidden min-h-screen">
+        <div class="flex flex-col h-screen">
+            <header class="bg-gray-800/50 backdrop-blur-sm border-b border-gray-700 p-4 flex justify-between items-center">
+                <h1 class="text-xl font-bold gradient-text">AutoBot AI</h1>
+            </header>
+
+            <main class="flex-1 p-4 lg:p-6 grid grid-cols-1 lg:grid-cols-3 gap-6 overflow-hidden">
+                <div class="lg:col-span-2 flex flex-col bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-4 border-b border-gray-700">
+                        <h2 class="text-lg font-semibold">AI Agent Console</h2>
+                        <div id="call-status-bar" class="hidden mt-2 p-2 bg-gray-700 rounded-lg flex items-center justify-between">
+                            <span id="call-status-text" class="text-sm font-medium"></span>
+                            <span id="call-timer" class="text-sm text-indigo-400 font-mono"></span>
+                        </div>
+                    </div>
+                    <div id="transcript" class="flex-1 p-4 space-y-4 overflow-y-auto scrollbar-thin"></div>
+                </div>
+
+                <aside class="flex flex-col bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-4 bg-gray-900 border-b border-gray-700">
+                        <h3 class="text-lg font-semibold text-center">Leads à Contacter</h3>
+                    </div>
+                    <div id="leads-container" class="flex-1 p-4 space-y-3 overflow-y-auto scrollbar-thin"></div>
+                </aside>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
