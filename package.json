@@ -1,0 +1,11 @@
+{
+  "name": "twilio-sales-agent-netlify",
+  "version": "1.0.0",
+  "description": "Serverless backend for AI Sales Agent with Twilio and Netlify",
+  "dependencies": {
+    "@google/generative-ai": "^0.14.1",
+    "dotenv": "^16.4.5",
+    "pusher": "^5.2.0",
+    "twilio": "^5.2.2"
+  }
+}
