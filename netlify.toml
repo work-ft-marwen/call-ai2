@@ -1,0 +1,11 @@
+# Configuration pour le déploiement sur Netlify
+[build]
+  command = "npm install"
+  functions = "netlify/functions"
+  publish = "public"
+
+# Règle de redirection pour des URLs d'API plus propres
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
